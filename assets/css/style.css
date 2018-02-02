@@ -1,12 +1,11 @@
+/* HTML Style */
 html {
     position: relative;
 }
-
 html, body {
     font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
     color: #777777;
     background-color: #efefef;
-    background: #efefef url("../images/shattered.png");
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -26,6 +25,7 @@ h2 {
     font-size: 1.3em;
 }
 
+/* Header Style*/
 header {
     width: 100%;
     height: auto;
@@ -38,7 +38,7 @@ header .container {
     margin: 0 auto;
 }
 
-.name, .navigation {
+.name, .nav {
     display: inline-block;
     vertical-align: middle;
     margin: 0;
@@ -49,7 +49,7 @@ header .container {
     width: 50%;
 }
 
-.profile pic {
+.logo {
     display: inline-block;
     font-family: 'Georgia', Times, 'Times New Roman', serif;
     font-weight: bold;
@@ -61,38 +61,38 @@ header .container {
     width: auto;
 }
 
-.navigation {
+.nav {
     width: 49%;
     text-align: right;
     color: #b1adb3;
     font-weight: normal;
 }
 
-.navigation ul li {
+.nav ul li {
     display: inline-block;
     padding-left: 1em;
     margin-left: 1em;
 }
 
-navigation ul li a:hover {
-    color: #4aaaa5;
-}
-
-.navigation ul li a.active {
-    color: #000000;
+.nav ul li a {
+    color: #b1adb3;
+    text-decoration: none;
+    -webkit-transition: color .4s;
+    transition: color .4s;
 }
 
 .nav ul li+li {
     border-left: 1px solid #cccccc;
 }
 
+/* Main Content Style */
 .content {
     width: 960px;
     clear: both;
     margin: 0 auto 6em auto;
 }
 
-.main section {
+.main {
     display: inline-block;
     width: 570px;
     margin: 40px 0;
@@ -101,7 +101,7 @@ navigation ul li a:hover {
     border: 1px solid #dddddd;
 }
 
-.main section h1 {
+.main h1 {
     font-size: 2em;
     font-weight: bold;
     padding-bottom: 1em;
@@ -109,19 +109,85 @@ navigation ul li a:hover {
     border-bottom: 2px solid #dddddd;
 }
 
-.main section p {
+.main p {
     font-size: 18px;
     line-height: 1.5em;
     margin-bottom: 2em;
 }
 
-.img profile pic {
+img.headshot {
     float: left;
     padding: 0 1em 1em 0;
     width: 200px;
     height: 200px;
 }
 
+/* Portfolio Style */
+.portfolio-item {
+    display: inline-block;
+    position: relative;
+    width: 270px;
+    height: 200px;
+    transition: transform .2s ease-out;
+}
+
+.portfolio-item:nth-child(even) {
+    margin-left: 25px;
+}
+
+.item-name {
+    position: relative;
+    top: -100px;
+    text-align: center;
+    background-color: #4aaaa5;
+    padding: 1em;
+    color: #ffffff;
+    z-index: 1000;
+}
+
+/* Contact Style */
+.contact {
+    width: 540px;
+}
+
+.contact label {
+    display: block;
+    padding-bottom: 0.5em;
+}
+
+.contact input, .contact textarea {
+    width: 100%;
+    border: 1px solid #cccccc;
+    margin-bottom: 1.5em;
+    padding: 1em;
+    font-size: .9em;
+}
+
+.contact input::-webkit-input-placeholder, .contact textarea::-webkit-input-placeholder {
+    color: #cccccc;
+}
+
+.contact input::-moz-placeholder, .contact textarea::-moz-placeholder {
+    color: #cccccc;
+}
+
+.contact input::-ms-placeholder, .contact textarea::-ms-placeholder {
+    color: #cccccc;
+}
+
+.contact input::placeholder, .contact textarea::placeholder {
+    color: #cccccc;
+}
+
+.contact input[type="submit"] {
+    width: auto;
+    background-color: #4aaaa5;
+    color: #ffffff;
+    border: none;
+    padding: 1em 2em;
+    font-size: 1em;
+}
+/* Sidebar Style*/
 .sidebar {
     display: inline-block;
     width: 190px;
@@ -148,13 +214,15 @@ navigation ul li a:hover {
     -webkit-transition-timing-function: ease-out;
     transition: all .2s;
     transition-timing-function: ease-out;
+
 }
 
-.s links img {
+.social img {
     width: 60px;
     height: auto;
 }
 
+/* Footer Style */
 footer {
     position: absolute;
     left: 0;
@@ -166,8 +234,4 @@ footer {
     color: #cccccc;
     background-color: #666666;
     border-top: 7px solid #4aaaa5;
-
-
-
-
-
+}
